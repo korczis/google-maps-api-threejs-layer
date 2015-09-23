@@ -1,0 +1,45 @@
+{
+  "name": "google-maps-api-threejs-layer",
+  "version": "0.1.1",
+  "description": "WebGL Overlay Layer for Google Maps",
+  "main": "threejs-layer.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-development": "webpack --config webpack/development.js",
+    "build-production": "webpack --config webpack/production.js",
+    "build": "npm run build-development && npm run build-production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korczis/google-maps-api-threejs-layer.git"
+  },
+  "keywords": [
+    "webgl",
+    "google",
+    "googlemaps",
+    "maps",
+    "threejs",
+    "three"
+  ],
+  "author": "Tomas Korcak <korczis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/korczis/google-maps-api-threejs-layer/issues"
+  },
+  "homepage": "https://github.com/korczis/google-maps-api-threejs-layer#readme",
+  "dependencies": {
+    "babel-core": "^5.8.25",
+    "babel-runtime": "^5.8.24",
+    "node.extend": "^1.1.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.3",
+    "eslint": "^1.5.1",
+    "eslint-loader": "^1.0.0",
+    "inline-source-map": "^0.6.0",
+    "webpack": "^1.12.2"
+  }
+}

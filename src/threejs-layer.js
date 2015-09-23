@@ -263,6 +263,14 @@ class ThreejsLayer extends google.maps.OverlayView {
     }
 
     /**
+     * Shortcut method to remove existing geometry from to the scene.
+     * @param  {Geometry} geometry The Three.js geometry to remove.
+     */
+    remove(geometry) {
+        this.scene.remove(geometry);
+    }
+
+    /**
      * Helper method to convert for LatLng to vertex.
      * @param  {google.maps.LatLng} latLng - The LatLng to convert.
      * @return {THREE.Vector3} The resulting vertex.
