@@ -18,7 +18,7 @@
     <script src="../lib/detector.js"></script>
     <script src="../lib/dat.gui.js"></script>
     <script src="../lib/three.js"></script>
-    <script src="../threejs-layer.js"></script>
+    <script src="../dist/threejs-layer.js"></script>
 
     <script>
 
@@ -74,7 +74,7 @@
 
             texture.needsUpdate = true;
 
-            material = new THREE.PointCloudMaterial({
+            material = new THREE.PointsMaterial({
               size: 20,
               map: texture,
               opacity: 0.3,
@@ -83,7 +83,7 @@
               transparent: true
             });
 
-            particles = new THREE.PointCloud( geometry, material );
+            particles = new THREE.Points( geometry, material );
           }
           layer.add( particles );
 
@@ -105,7 +105,7 @@
         var canvas = document.createElement('canvas'),
           context = canvas.getContext('2d'),
           gradient;
-        size = size || 20;
+        size = size || 32;
         canvas.width = size;
         canvas.height = size;
 
@@ -114,8 +114,8 @@
           canvas.width / 2, canvas.height / 2, canvas.width / 2
         );
 
-        gradient.addColorStop(1.0, 'rgba(255,255,255,0)');
-        gradient.addColorStop(0.0, 'rgba(255,255,255,1)');
+        gradient.addColorStop(1.0, 'rgba(255,0,0,0)');
+        gradient.addColorStop(0.0, 'rgba(255,0,0,1)');
 
         context.fillStyle = gradient;
         context.fillRect(0, 0, canvas.width, canvas.height);
